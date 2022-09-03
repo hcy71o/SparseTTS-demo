@@ -26,7 +26,27 @@
     </article>
     
     <div>
-      <a name="ss"><h2>LJ Speech Dataset</h2></a>
+      <a name="ss"><h2>Abstract</h2></a>
+      </td>
+      <td class="text">
+        This letter proposes an efficient style/speaker-
+        conditioning method that is applicable to zero-shot text-to-speech
+        (TTS) systems. Based on the inductive bias in the speech generation
+        task, i.e. local context information in text/phoneme sequences
+        heavily affect the style of the output speech, we propose a
+        Style-Conditional Convolutional Neural Network (SC-CNN). Our
+        proposed SC-CNN first predicts convolutional kernels from each
+        learned style representation, then applies 1-D convolution to
+        phoneme sequences with the predicted kernels. It successfully
+        utilizes the above inductive bias and effectively provides the style-
+        specific local dependencies to the phoneme hidden states. We
+        design SC-CNN for transformer encoder, and adopt SC-CNN and
+        other conventional conditioning methods to FastSpeech 2-based
+        system under the same setup for experiments. The results confirm
+        that SC-CNN outperforms the conventional methods which have
+        been used in recent few- or zero-shot TTS models in terms of
+        both subjective and objective evaluations.
+      </td>
       <hr>
       <table>
         <tbody>
