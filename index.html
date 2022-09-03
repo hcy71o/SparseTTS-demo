@@ -15,6 +15,12 @@
         font-style: italic;
         color: #666666;
       }
+      audio {
+        display: inline-block; 
+        padding:8px; 
+        width: 250px; 
+        height: 40px;
+      }
     </style>
   </head>
   <body style="text-align: center;">
@@ -24,11 +30,16 @@
           for Zero-Shot Text-to-Speech System"</h1>
       </header>
     </article>
-    
+      <a style="margin: 0 auto;"><b>Authors</b>: Hyungchan Yoon, Seyun Um, Chanhwan Kim, Hong-Goo Kang</a>
+    <div>
+    <a href="https://github.com/hcy71o/SC-CNN"><h3>Code</h3></a>
+
+    <hr>
     <div>
       <a name="ss"><h2>Abstract</h2></a>
       </td>
-      <td class="text">
+      <div class="container" style="max-width:730px; text-align: center; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
+        <p style="line-height:1.2;">
         This letter proposes an efficient style/speaker-
         conditioning method that is applicable to zero-shot text-to-speech
         (TTS) systems. Based on the inductive bias in the speech generation
@@ -46,66 +57,161 @@
         that SC-CNN outperforms the conventional methods which have
         been used in recent few- or zero-shot TTS models in terms of
         both subjective and objective evaluations.
-      </td>
+        </p>
+      </div>
       <hr>
+      <a name="ss"><h2>VCTK zero-shot inference</h2></a>
+      <a name="ss"><h3>Section 1. Non-parallel style transfer: Text input does not correspond to reference speech.</h3></a>
+      <h4>Method used for MOS and WER. Do generated audios show high naturalness and intelligibility?</h4>
       <table>
         <tbody>
+          <tr>
+            <td>
+              <tr>
+                <td class="first-col">Reference Speech</td>
+                <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
+              </tr>
+          </tr>
+          <tr>
+            <td class="first-col">
+              <h4>Text</h4>
+            </td>
+            <td class="text"> 
+              and John Lancaster for 1 shilling, 8 pence, with costs of 7 shillings, 6 pence. Quote.
+            </td>
+            <td class="text">
+              These malpractices were fostered by the absence of all supervision and the generally unbroken idleness.
+            </td>
+            <td class="text">
+              Mr. Davison, sent to Newgate for embezzlement, and whose case is given in the preceding chapter,
+            </td>
+            <td class="text">
+              With the seeming impossibility of extending the limits of the prison as it then stood,
+            </td>
+            <td class="text">
+              With the seeming impossibility of extending the limits of the prison as it then stood,
+            </td>
+          </tr>
+          <tr>
+            <td class="first-col">Ground Truth</td>
+            <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
+          </tr>
         <tr>
-          <td>
-            <h4>Text</h4>
-          </td>
-          <td class="text">
-            and John Lancaster for 1 shilling, 8 pence, with costs of 7 shillings, 6 pence. Quote.
-          </td>
-          <td class="text">
-            These malpractices were fostered by the absence of all supervision and the generally unbroken idleness.
-          </td>
-          <td class="text">
-            Mr. Davison, sent to Newgate for embezzlement, and whose case is given in the preceding chapter,
-          </td>
-          <td class="text">
-            With the seeming impossibility of extending the limits of the prison as it then stood,
-          </td>
-        </tr>
-        <tr>
-          <td class="first-col">Ground Truth</td>
-          <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">Tacotron 2 + UnivNet-c16</td>
+          <td class="first-col">ZS-FastSpeech 2</td>
           <td><audio controls="" preload="none"><source src="wavs/Taco2_344.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0275.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0174.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0343.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">GlowTTS + UnivNet-c16</td>
+          <td class="first-col">ZS-AdaSpeech</td>
           <td><audio controls="" preload="none"><source src="wavs/Glow344.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Glow003-0275.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Glow003-0174.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">LiteTTS w/ UnivNet-c16</td>
+          <td class="first-col">StyleSpeech</td>
           <td><audio controls="" preload="none"><source src="wavs/Lite344.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Lite003-0275.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Lite003-0174.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">AILTTS (ours)</td>
+          <td class="first-col">SC-CNN</td>
           <td><audio controls="" preload="none"><source src="wavs/P344.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/P003-0275.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/P003-0174.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
         </tr>
         </tbody>
       </table>
     </div>
-    
+    <div>
+      <a name="ss"><h3>Section 2. Parallel style transfer: Text input corresponds to reference speech.</h3></a>
+      <h4>Method used for SMOS, MCD and SEC. Do generated audios follow the style of reference speech?</h4>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <tr>
+                <td class="first-col">Reference Speech</td>
+                <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
+              </tr>
+          </tr>
+          <tr>
+            <td class="first-col">
+              <h4>Text</h4>
+            </td>
+            <td class="text"> 
+              and John Lancaster for 1 shilling, 8 pence, with costs of 7 shillings, 6 pence. Quote.
+            </td>
+            <td class="text">
+              These malpractices were fostered by the absence of all supervision and the generally unbroken idleness.
+            </td>
+            <td class="text">
+              Mr. Davison, sent to Newgate for embezzlement, and whose case is given in the preceding chapter,
+            </td>
+            <td class="text">
+              With the seeming impossibility of extending the limits of the prison as it then stood,
+            </td>
+            <td class="text">
+              With the seeming impossibility of extending the limits of the prison as it then stood,
+            </td>
+          </tr>
+          <tr>
+            <td class="first-col">Ground Truth</td>
+            <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
+          </tr>
+        <tr>
+          <td class="first-col">ZS-FastSpeech 2</td>
+          <td><audio controls="" preload="none"><source src="wavs/Taco2_344.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0275.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0174.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0343.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">ZS-AdaSpeech</td>
+          <td><audio controls="" preload="none"><source src="wavs/Glow344.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Glow003-0275.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Glow003-0174.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">StyleSpeech</td>
+          <td><audio controls="" preload="none"><source src="wavs/Lite344.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Lite003-0275.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Lite003-0174.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">SC-CNN</td>
+          <td><audio controls="" preload="none"><source src="wavs/P344.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P003-0275.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P003-0174.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
     <div>
       <a name="as"><h2>Ablation Study</h2></a>
       <hr>
