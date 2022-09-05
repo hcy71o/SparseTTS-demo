@@ -18,7 +18,7 @@
       audio {
         display: inline-block; 
         padding:8px; 
-        width: 250px; 
+        width: 280px; 
         height: 40px;
       }
     </style>
@@ -63,16 +63,17 @@
       <a name="ss"><h2>VCTK zero-shot inference</h2></a>
       <a name="ss"><h3>Section 1. Non-parallel style transfer: Text input does not correspond to reference speech.</h3></a>
       <h4>Method used for MOS and WER. Do generated audios show high naturalness and intelligibility?</h4>
+      <h4>[16000Hz]</h4>
       <table>
         <tbody>
           <tr>
             <td>
               <tr>
                 <td class="first-col"><h4>Reference Speech</h4></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p269_112_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p298_158_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p311_210_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p314_179_REF.wav"></audio></td>
               </tr>
           </tr>
           <tr>
@@ -91,47 +92,94 @@
             <td class="text">
               With the seeming impossibility of extending the limits of the prison as it then stood,
             </td>
+          </tr>
+        <tr>
+          <td class="first-col">ZS-FastSpeech 2</td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">ZS-AdaSpeech</td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">StyleSpeech</td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">SC-CNN</td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+      <h4>[22050Hz]</h4>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <tr>
+                <td class="first-col"><h4>Reference Speech</h4></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/22/REF/p269_112_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/22/REF/p298_158_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/22/REF/p311_210_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/NP/22/REF/p314_179_REF.wav"></audio></td>
+              </tr>
+          </tr>
+          <tr>
+            <td class="first-col">
+              <h4>Synthesized text</h4>
+            </td>
+            <td class="text"> 
+              and John Lancaster for 1 shilling, 8 pence, with costs of 7 shillings, 6 pence. Quote.
+            </td>
+            <td class="text">
+              These malpractices were fostered by the absence of all supervision and the generally unbroken idleness.
+            </td>
+            <td class="text">
+              Mr. Davison, sent to Newgate for embezzlement, and whose case is given in the preceding chapter,
+            </td>
             <td class="text">
               With the seeming impossibility of extending the limits of the prison as it then stood,
             </td>
           </tr>
-          <tr>
-            <td class="first-col">Ground Truth</td>
-            <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
-          </tr>
         <tr>
           <td class="first-col">ZS-FastSpeech 2</td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M1/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M1/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M1/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M1/p314_179_It_opens_t.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">ZS-AdaSpeech</td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M2/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M2/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M2/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M2/p314_179_It_opens_t.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">StyleSpeech</td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M3/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M3/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M3/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M3/p314_179_It_opens_t.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">SC-CNN</td>
-          <td><audio controls="" preload="none"><source src="wavs/P344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M4/p269_112_To_the_Heb.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M4/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M4/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/22/M4/p314_179_It_opens_t.wav"></audio></td>
         </tr>
         </tbody>
       </table>
@@ -139,16 +187,17 @@
     <div>
       <a name="ss"><h3>Section 2. Parallel style transfer: Text input corresponds to reference speech.</h3></a>
       <h4>Method used for SMOS, MCD and SEC. Do generated audios follow the style of reference speech?</h4>
+      <h4>[16000Hz]</h4>
       <table>
         <tbody>
           <tr>
             <td>
               <tr>
                 <td class="first-col"><h4>Reference Speech</h4></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/16/REF/p299_160_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/16/REF/p300_251_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/16/REF/p334_142_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/16/REF/p363_042_REF.wav"></audio></td>
               </tr>
           </tr>
           <tr>
@@ -167,89 +216,97 @@
             <td class="text">
               With the seeming impossibility of extending the limits of the prison as it then stood,
             </td>
+          </tr>
+          <tr>
+            <td class="first-col">ZS-FastSpeech 2</td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M1/p299_160_Meanwhile,.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M1/p300_251_I_am_total.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M1/p334_142_That_will_.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M1/p363_042_There_is_a.wav"></audio></td>
+          </tr>
+          <tr>
+            <td class="first-col">ZS-AdaSpeech</td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M2/p299_160_Meanwhile,.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M2/p300_251_I_am_total.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M2/p334_142_That_will_.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M2/p363_042_There_is_a.wav"></audio></td>
+          </tr>
+          <tr>
+            <td class="first-col">StyleSpeech</td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M3/p299_160_Meanwhile,.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M3/p300_251_I_am_total.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M3/p334_142_That_will_.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M3/p363_042_There_is_a.wav"></audio></td>
+          </tr>
+          <tr>
+            <td class="first-col">SC-CNN</td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M4/p299_160_Meanwhile,.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M4/p300_251_I_am_total.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M4/p334_142_That_will_.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="wavs/P/16/M4/p363_042_There_is_a.wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>[22050Hz]</h4>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <tr>
+                <td class="first-col"><h4>Reference Speech</h4></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/22/REF/p299_160_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/22/REF/p300_251_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/22/REF/p334_142_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/P/22/REF/p363_042_REF.wav"></audio></td>
+              </tr>
+          </tr>
+          <tr>
+            <td class="first-col">
+              <h4>Synthesized text</h4>
+            </td>
+            <td class="text"> 
+              and John Lancaster for 1 shilling, 8 pence, with costs of 7 shillings, 6 pence. Quote.
+            </td>
+            <td class="text">
+              These malpractices were fostered by the absence of all supervision and the generally unbroken idleness.
+            </td>
+            <td class="text">
+              Mr. Davison, sent to Newgate for embezzlement, and whose case is given in the preceding chapter,
+            </td>
             <td class="text">
               With the seeming impossibility of extending the limits of the prison as it then stood,
             </td>
           </tr>
-          <tr>
-            <td class="first-col">Ground Truth</td>
-            <td><audio controls="" preload="none"><source src="wavs/GT344.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="wavs/GT003-0275.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="wavs/GT003-0174.wav"></audio></td>
-            <td><audio controls="" preload="none"><source src="wavs/GT003-0343.wav"></audio></td>
-          </tr>
         <tr>
           <td class="first-col">ZS-FastSpeech 2</td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Taco2_003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M1/p299_160_Meanwhile,.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M1/p300_251_I_am_total.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M1/p334_142_That_will_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M1/p363_042_There_is_a.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">ZS-AdaSpeech</td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Glow003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M2/p299_160_Meanwhile,.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M2/p300_251_I_am_total.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M2/p334_142_That_will_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M2/p363_042_There_is_a.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">StyleSpeech</td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/Lite003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M3/p299_160_Meanwhile,.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M3/p300_251_I_am_total.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M3/p334_142_That_will_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M3/p363_042_There_is_a.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">SC-CNN</td>
-          <td><audio controls="" preload="none"><source src="wavs/P344.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0275.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0174.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P003-0343.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M4/p299_160_Meanwhile,.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M4/p300_251_I_am_total.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M4/p334_142_That_will_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/P/22/M4/p363_042_There_is_a.wav"></audio></td>
         </tr>
         </tbody>
       </table>
     </div>
-    <!-- <div>
-      <a name="as"><h2>Ablation Study</h2></a>
-      <hr>
-      <table>
-        <tbody>
-        <tr>
-          <td>
-            <h4>Synthesized text</h4>
-          </td>
-          <td class="text">
-            the Fleet, and the Marshalsea prisons especially devoted to them,
-          </td>
-          <td class="text">
-            or the sixpenny allowance was claimed for the creditors, which seldom happened, owing to the expense the process entailed.
-          </td>
-          <td class="text">
-            Authority was given to raise money on the Orphans' Fund to the extent of ninety thousand pounds.
-          </td>
-        </tr>
-        <tr>
-          <td class="first-col">AILTTS (ours)</td>
-          <td><audio controls="" preload="none"><source src="wavs/P366.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P509.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P558.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">AILTTS w/o Conditional Discriminator</td>
-          <td><audio controls="" preload="none"><source src="wavs/P366_woCD.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P509_woCD.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P558_woCD.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">AILTTS w/o Prosody-conditioned Aligner</td>
-          <td><audio controls="" preload="none"><source src="wavs/P366_woPA.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P509_woPA.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/P558_woPA.wav"></audio></td>
-        </tr>
-      </table>
-    </div> -->
   </body>
 </html>
