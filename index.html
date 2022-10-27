@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head style="text-align: center;">
-    <title>SparseTTS-demo: "PRUNING SELF-ATTENTION FOR SPEAKER-ADAPTIVE TEXT-TO-SPEECH"</title>
+    <title>SparseTTS-demo: "Pruning Self-Attention for Speaker-Adaptive Text-to-Speech"</title>
     <style>
       div {
         margin-bottom: 64px;
@@ -25,8 +25,7 @@
   <body style="text-align: center;">
     <article>
       <header>
-        <h1>SC-CNN-demo: "An Effective Style Conditioning Method
-          for Zero-Shot Text-to-Speech Systems"</h1>
+        <h1>SparseTTS-demo: "Pruning Self-Attention for Speaker-Adaptive Text-to-Speech"</h1>
       </header>
     </article>
       <a style="margin: 0 auto;"><b>Authors</b>: Hyungchan Yoon, Chanhwan Kim, Eunwoo Song, Hyun-Wook Yoon, Hong-Goo Kang</a>
@@ -37,7 +36,7 @@
     <div>
       <a name="ss"><h2>Abstract</h2></a>
       </td>
-      <div class="container" style="max-width:700px; text-align: center; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
+      <div class="container" style="max-width:600px; text-align: center; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
         <p style="line-height:1.2;">
           For personalized speech generation, a neural text-to-speech (TTS) model must be successfully implemented with only a limited amount of training data from a target speaker. To this end, the baseline TTS model needs to be amply generalized to out-of-domain data (i.e., target/unseen speaker’s speech). However, approaches to address this out-of-domain generalization problem in TTS have yet to be thoroughly studied. In this work, we propose an effective pruning method for a transformer known as sparse attention, to improve the TTS model’s generalization abilities. In particular, we prune off redundant connections from self-attention layers whose attention weights are below the threshold. To flexibly determine the pruning strength for optimal generalization, we also propose a new differentiable pruning method that allows the model to automatically learn threshold values during training. Evaluations on zero-shot speaker-adaptive TTS verify the effectiveness of our method in terms of voice quality and speaker similarity.
         </p>
