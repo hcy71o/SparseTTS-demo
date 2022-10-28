@@ -17,7 +17,7 @@
       audio {
         display: inline-block; 
         padding:8px; 
-        width: 280px; 
+        width: 250px; 
         height: 40px;
       }
     </style>
@@ -49,8 +49,8 @@
             <td>
               <tr>
                 <td class="first-col"><h4>Reference Speech</h4></td>
-                <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p269_112_REF.wav"></audio></td>
-                <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p298_158_REF.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/REF/p302_152.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="wavs/REF/p318_215.wav"></audio></td>
                 <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p311_210_REF.wav"></audio></td>
                 <td><audio controls="" preload="none"><source src="wavs/NP/16/REF/p314_179_REF.wav"></audio></td>
               </tr>
@@ -60,10 +60,10 @@
               <h4>Synthesized text</h4>
             </td>
             <td class="text"> 
-              To the Hebrews it was a token that there would be no more universal floods. 
+              the european court is <br>our only option.
             </td>
             <td class="text">
-              There were no passengers on board.
+              we have the support of <br>scottish natural heritage.
             </td>
             <td class="text">
               They also intend to travel today.
@@ -73,32 +73,53 @@
             </td>
           </tr>
         <tr>
-          <td class="first-col">ZS-FastSpeech 2</td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p269_112_To_the_Heb.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p298_158_There_were.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p311_210_They_also_.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p314_179_It_opens_t.wav"></audio></td>
-        </tr>
-        <!-- <tr>
-          <td class="first-col">ZS-AdaSpeech</td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p269_112_To_the_Heb.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p298_158_There_were.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p311_210_They_also_.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p314_179_It_opens_t.wav"></audio></td>
-        </tr> -->
-        <tr>
           <td class="first-col">StyleSpeech</td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p269_112_To_the_Heb.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p298_158_There_were.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/SS/p302_135_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/SS/p318_237_GEN.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p311_210_They_also_.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/NP/16/M3/p314_179_It_opens_t.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">SC-CNN</td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p269_112_To_the_Heb.wav"></audio></td>
-          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p298_158_There_were.wav"></audio></td>
+          <td class="first-col">VP</td>
+          <td><audio controls="" preload="none"><source src="wavs/VP/p302_135_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/VP/p318_237_GEN.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p311_210_They_also_.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">DP(R=0.50)</td>
+          <td><audio controls="" preload="none"><source src="wavs/DP50/p302_135_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/DP50/p318_237_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">DP(R=0.45)</td>
+          <td><audio controls="" preload="none"><source src="wavs/DP45/p302_135_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/DP45/p318_237_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">DP(R=0.40)</td>
+          <td><audio controls="" preload="none"><source src="wavs/DP40/p302_135_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/DP40/p318_237_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M4/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Ground Truth</td>
+          <td><audio controls="" preload="none"><source src="wavs/GT/p302_135_GT.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GT/p318_237_GT.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M1/p314_179_It_opens_t.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">GT mel + Voc.</td>
+          <td><audio controls="" preload="none"><source src="wavs/GM/p302_135_GM.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GM/p318_237_GM.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p311_210_They_also_.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/NP/16/M2/p314_179_It_opens_t.wav"></audio></td>
         </tr>
         </tbody>
       </table>
