@@ -21,6 +21,12 @@
         height: 40px;
       }
     </style>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body style="text-align: center;">
     <article>
@@ -42,7 +48,7 @@
         </p>
       </div>
       <hr>
-      <a name="ss"><h2>VCTK zero-shot inference</h2></a>
+      <a name="ss"><h2>Section 4.2. Evaluation on Zero-Shot TTS - VCTK unseen speakers</h2></a>
       <table style="margin-left:auto;margin-right:auto;">
         <tbody>
           <tr>
@@ -116,6 +122,51 @@
         </tr>
         <tr>
           <td class="first-col">GT mel + Voc.</td>
+          <td><audio controls="" preload="none"><source src="wavs/GM/p302_135_GM.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GM/p258_021_GM.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GM/p312_370_GM.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GM/p318_237_GM.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <hr>
+      <a name="ss"><h2>Section 4.3. Ablation Study</h2></a>
+      <table style="margin-left:auto;margin-right:auto;">
+        <tbody>
+          <tr>
+            <td class="first-col">
+              <h4>Synthesized text</h4>
+            </td>
+            <td class="text"> 
+              this is the first step.
+            </td>
+            <td class="text">
+              it also has a good labour supply.
+            </td>
+            <td class="text">
+              the new system will be marketed this summer.
+            </td>
+            <td class="text">
+              we have the support of <br>scottish natural heritage.
+            </td>
+          </tr>
+        <tr>
+          <td class="first-col">DP(R=0.45)</td>
+          <td><audio controls="" preload="none"><source src="wavs/DP45/p302_135_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/DP45/p258_021_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/DP45/p312_370_GEN.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/DP45/p318_237_GEN.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">w/o  ${SM}_{hard}$</td>
+          <td><audio controls="" preload="none"><source src="wavs/GT/p302_135_GT.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GT/p258_021_GT.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GT/p312_370_GT.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/GT/p318_237_GT.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">w/o  $\mathcal{L}_{sp}$</td>
           <td><audio controls="" preload="none"><source src="wavs/GM/p302_135_GM.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/GM/p258_021_GM.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/GM/p312_370_GM.wav"></audio></td>
