@@ -13,7 +13,7 @@
       }
       .text {
         font-style: italic;
-        color: #666666;
+        color: #3a3a3a;
       }
       audio {
         display: inline-block; 
@@ -38,15 +38,16 @@
 
     <hr>
     <div>
-      <a name="ss"><h2>Abstract</h2></a>
+      <a name="Abstract"><h2>Abstract</h2></a>
       </td>
-      <div class="container" style="max-width:600px; text-align: center; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
+      <div class="container" style="max-width:730px; text-align: center; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
         <p style="line-height:1.2;">
-          For personalized speech generation, a neural text-to-speech (TTS) model must be successfully implemented with only a limited amount of training data from a target speaker. To this end, the baseline TTS model needs to be amply generalized to out-of-domain data (i.e., target/unseen speaker’s speech). However, approaches to address this out-of-domain generalization problem in TTS have yet to be thoroughly studied. In this work, we propose an effective pruning method for a transformer known as sparse attention, to improve the TTS model’s generalization abilities. In particular, we prune off redundant connections from self-attention layers whose attention weights are below the threshold. To flexibly determine the pruning strength for optimal generalization, we also propose a new differentiable pruning method that allows the model to automatically learn threshold values during training. Evaluations on zero-shot speaker-adaptive TTS verify the effectiveness of our method in terms of voice quality and speaker similarity.
+          <font size="4">For personalized speech generation, a neural text-to-speech (TTS) model must be successfully implemented with only a limited amount of training data from a target speaker. To this end, the baseline TTS model needs to be amply generalized to out-of-domain data (i.e., target/unseen speaker’s speech). However, approaches to address this out-of-domain generalization problem in TTS have yet to be thoroughly studied. In this work, we propose an effective pruning method for a transformer known as sparse attention, to improve the TTS model’s generalization abilities. In particular, we prune off redundant connections from self-attention layers whose attention weights are below the threshold. To flexibly determine the pruning strength for optimal generalization, we also propose a new differentiable pruning method that allows the model to automatically learn threshold values during training. Evaluations on zero-shot speaker-adaptive TTS verify the effectiveness of our method in terms of voice quality and speaker similarity.</font>
         </p>
       </div>
       <hr>
-      <a name="ss"><h2>Section 4.2. Evaluation on Zero-Shot TTS - VCTK unseen speakers</h2></a>
+    <div>
+      <a name="4-2"><h2>Section 4.2. Evaluation on Zero-Shot TTS - VCTK unseen speakers</h2></a>
       <table style="margin-left:auto;margin-right:auto;">
         <tbody>
           <tr>
@@ -127,9 +128,11 @@
         </tr>
         </tbody>
       </table>
-
-      <hr>
-      <a name="ss"><h2>Section 4.3. Ablation Study</h2></a>
+    </div>
+    
+    <hr>
+    <div>
+      <a name="4-3"><h2>Section 4.3. Ablation Study</h2></a>
       <table style="margin-left:auto;margin-right:auto;">
         <tbody>
           <tr>
@@ -172,6 +175,104 @@
         </tr>
         </tbody>
       </table>
+    </div>
+    <div>
+      <hr>
+      <a name="4-4"><h2>Section 4.4. Analysis of Differentiable Pruning</h2></a>
+      <div class="container" style="max-width:1000px; text-align: left; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
+        <p style="line-height:1.2;">
+          <font size="4.5">In this section, we visualize all attention maps from the mel-spectrogram decoder varying the sparsity ratio \(R\). In particular, we plot pruned (masked) attention heads in inference phase.  Reference audios are randomly selected from VCTK dataset. The transcript used for synthesis are provided below each plot.</font>
+        </p>
+      </div>
+    </div>
+    <div>
+      <h3 class="text">"How many attention connections are pruned?"</h3>
+      <table style="margin-left:150px;margin-right:150px;">
+        <tbody>
+          <tr>
+            <td>
+              <h4>\(R=0.40\)</h4>
+            </td>
+            <td>
+              <h4>\(R=0.45\)</h4>
+            </td>    
+            <td>    
+              <h4>\(R=0.50\)</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/p256_40post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+            <td>
+              <img src="images/p256_45post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+            <td>
+              <img src="images/p256_50post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 class="text">"to establish ties?"</h3>
+      <table style="margin-left:150px;margin-right:150px;">
+        <tbody>
+          <tr>
+            <td>
+              <h4>\(R=0.40\)</h4>
+            </td>
+            <td>
+              <h4>\(R=0.45\)</h4>
+            </td>    
+            <td>    
+              <h4>\(R=0.50\)</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/p236_40post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+            <td>
+              <img src="images/p236_45post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+            <td>
+              <img src="images/p236_50post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 class="text">"For all practical purposes, price stability means that expected changes in the average price level are small enough <br>and gradual enough that they do not materially enter business and household financial decisions."</h3>
+      <table style="margin-left:150px;margin-right:150px;">
+        <tbody>
+          <tr>
+            <td>
+              <h4>\(R=0.40\)</h4>
+            </td>
+            <td>
+              <h4>\(R=0.45\)</h4>
+            </td>    
+            <td>    
+              <h4>\(R=0.50\)</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/p231_40post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+            <td>
+              <img src="images/p231_45post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+            <td>
+              <img src="images/p231_50post_attns.png" style="max-width: 85%; height: auto;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
 
     </div>
   </body>
