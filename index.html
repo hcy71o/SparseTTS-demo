@@ -32,7 +32,7 @@
         <h1>SparseTTS-demo: "Pruning Self-Attention for Speaker-Adaptive Text-to-Speech"</h1>
       </header>
     </article>
-      <!-- <a style="margin: 0 auto;"><b>Authors</b>: Hyungchan Yoon, Changhwan Kim, Eunwoo Song, Hyun-Wook Yoon, Hong-Goo Kang</a> -->
+      <a style="margin: 0 auto;"><b>Authors</b>: Hyungchan Yoon, Changhwan Kim, Eunwoo Song, Hyun-Wook Yoon, Hong-Goo Kang</a>
     <div>
     <!-- <a href="https://github.com/hcy71o/SC-CNN"><h3>Code</h3></a> -->
 
@@ -52,12 +52,20 @@
           <font size="4"><a href="#4-2">Section 4.2.</a> Evaluation on Zero-Shot TTS<br></font>
           <font size="4"><a href="#4-3">Section 4.3.</a> Ablation Study<br></font>
           <font size="4"><a href="#4-4">Section 4.4.</a> Analysis of Differentiable Pruning<br></font>
-            <!-- <font size="4">For personalized speech generation, a neural text-to-speech (TTS) model must be successfully implemented with only a limited amount of training data from a target speaker. To this end, the baseline TTS model needs to be amply generalized to out-of-domain data (i.e., target/unseen speaker’s speech). However, approaches to address this out-of-domain generalization problem in TTS have yet to be thoroughly studied. In this work, we propose an effective pruning method for a transformer known as sparse attention, to improve the TTS model’s generalization abilities. In particular, we prune off redundant connections from self-attention layers whose attention weights are below the threshold. To flexibly determine the pruning strength for optimal generalization, we also propose a new differentiable pruning method that allows the model to automatically learn threshold values during training. Evaluations on zero-shot speaker-adaptive TTS verify the effectiveness of our method in terms of voice quality and speaker similarity.</font> -->
         </div>
     </div>
       <hr>
     <div>
       <a name="4-2"><h2>Section 4.2. Evaluation on Zero-Shot TTS - VCTK unseen speakers</h2></a>
+      <div class="container" style="max-width:1000px; text-align: left; margin:0 auto; margin-top: 20px; margin-bottom: 40px">
+        <p style="line-height:1.2;">
+          <font size="4.5">
+            Note. The demo includes the samples from an improved model that maximizes the upper bound on performance, which is not described in the paper. It is denoted as<b>DP(R=45)_UP</b>, which have two improvements compared to DP(R=45): 
+            1. The HiFi-GAN vocoder is further fine-tuned with generated mel-spectrograms of training dataset; 
+            2. <a href="https://arxiv.org/abs/2106.03153">SALN</a> is replaced with <a href="https://ieeexplore.ieee.org/document/10129023/">SC-CNN</a> in the encoder.
+            </font>
+        </p>
+      </div>
       <table style="margin-left:auto;margin-right:auto;">
         <tbody>
           <tr>
@@ -121,6 +129,13 @@
           <td><audio controls="" preload="none"><source src="wavs/DP40/p258_021_GEN.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/DP40/p312_370_GEN.wav"></audio></td>
           <td><audio controls="" preload="none"><source src="wavs/DP40/p318_237_GEN.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">DP(R=0.45)_UP</td>
+          <td><audio controls="" preload="none"><source src="wavs/UP/the_europe.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/UP/the_differ.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/UP/I'm_not_in.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="wavs/UP/we_have_th.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">Ground Truth</td>
